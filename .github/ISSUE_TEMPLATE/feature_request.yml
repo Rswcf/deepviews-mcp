@@ -1,0 +1,14 @@
+name: Feature request
+description: A tool, metric or client integration you would like
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What do you want to ask your assistant that it cannot answer today?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Proposed tool or change

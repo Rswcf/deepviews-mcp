@@ -1,0 +1,14 @@
+{
+  "name": "deepviews",
+  "description": "DeepViews: free SEC-EDGAR fundamentals, DCF and WACC tools for Claude Code",
+  "owner": {
+    "name": "DeepViews"
+  },
+  "plugins": [
+    {
+      "name": "deepviews",
+      "source": "./",
+      "description": "Company analysis, DCF valuation, WACC, comparables, industry benchmarks and screening for ~13,700 US-listed companies from SEC EDGAR. No API key."
+    }
+  ]
+}

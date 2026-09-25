@@ -118,6 +118,7 @@ function line(label: string, value: string): string {
 const TOOL_DEFINITIONS = [
   {
     name: "analyze_company",
+    annotations: { title: "Analyze company financials", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
     description:
       "Get comprehensive financial analysis for a company: valuation ratios, the latest financial statements, several fiscal years of revenue and margins, and key metrics. Data sourced from SEC EDGAR filings and Polygon.io market data.",
     inputSchema: {
@@ -133,6 +134,7 @@ const TOOL_DEFINITIONS = [
   },
   {
     name: "calculate_dcf",
+    annotations: { title: "Run a DCF valuation", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
     description:
       "Run the DeepViews DCF (same model and default inputs as the deepviews.dev /dcf page): fair value per share versus the previous close, reverse DCF, projected FCFs, and a WACC vs terminal growth sensitivity matrix. Optional arguments override single assumptions.",
     inputSchema: {
@@ -168,6 +170,7 @@ const TOOL_DEFINITIONS = [
   },
   {
     name: "get_industry_benchmarks",
+    annotations: { title: "Compare with industry benchmarks", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
     description:
       "Get industry benchmark data comparing a company against its sector peers. Returns 25th/50th/75th percentile for P/E, P/B, P/S, EV/EBITDA, margins, ROE, current ratio, and debt-to-equity. Data from SEC EDGAR filings with Polygon.io market caps.",
     inputSchema: {
@@ -183,8 +186,9 @@ const TOOL_DEFINITIONS = [
   },
   {
     name: "get_market_signals",
+    annotations: { title: "Get market signals", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
     description:
-      "Get real-time market signals for a stock including technical indicators (RSI, MACD, SMA 50/200), news sentiment analysis, and short interest data. All data sourced from Polygon.io.",
+      "Get market signals for a stock: technical indicators (RSI, MACD, SMA 50/200), news sentiment, and short interest. Market data is delayed, not live. All data sourced from Polygon.io.",
     inputSchema: {
       type: "object" as const,
       properties: {
@@ -198,6 +202,7 @@ const TOOL_DEFINITIONS = [
   },
   {
     name: "screen_stocks",
+    annotations: { title: "Screen stocks", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
     description:
       "Screen stocks by sector, industry, and financial metrics. Filter by P/E, P/B, EV/EBITDA, ROE, debt-to-equity, market cap, and revenue. Returns matching companies with full financial profiles.",
     inputSchema: {
@@ -274,6 +279,7 @@ const TOOL_DEFINITIONS = [
   },
   {
     name: "get_news_sentiment",
+    annotations: { title: "Get news sentiment", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
     description:
       "Get aggregated news sentiment analysis for a company over the last 30 days. Returns sentiment score (-100 to +100), label, trend, and article count breakdown. Powered by Polygon.io news API.",
     inputSchema: {
@@ -289,6 +295,7 @@ const TOOL_DEFINITIONS = [
   },
   {
     name: "get_comparables",
+    annotations: { title: "Find comparable companies", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
     description:
       "Get comparable company analysis showing a target company vs its closest peers by market cap. Returns per-company metrics (P/E, P/B, P/S, EV/EBITDA, Gross Margin, Net Margin, ROE, D/E) with group statistics. Data from SEC EDGAR filings + Polygon.io market caps.",
     inputSchema: {

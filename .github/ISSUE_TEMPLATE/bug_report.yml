@@ -1,0 +1,32 @@
+name: Bug report
+description: A tool fails, times out or returns something broken
+labels: [bug]
+body:
+  - type: input
+    id: tool
+    attributes:
+      label: Tool and arguments
+      placeholder: 'calculate_dcf { "ticker": "MSFT" }'
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Paste the error or the output.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+  - type: input
+    id: client
+    attributes:
+      label: MCP client and version
+      placeholder: Claude Desktop 1.x, Cursor 1.x, VS Code, Claude Code …
+  - type: input
+    id: version
+    attributes:
+      label: deepviews-mcp version
+      placeholder: npx -y deepviews-mcp@latest reports it in the initialize response

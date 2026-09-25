@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: DeepViews website
+    url: https://www.deepviews.dev
+    about: The same data and models in a browser, in English and Chinese.

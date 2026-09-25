@@ -1,0 +1,34 @@
+name: Data issue
+description: A number is wrong or missing compared with the SEC filing
+labels: [data]
+body:
+  - type: input
+    id: ticker
+    attributes:
+      label: Ticker and tool
+      placeholder: 'AAPL, analyze_company'
+    validations:
+      required: true
+  - type: input
+    id: field
+    attributes:
+      label: Field and period
+      placeholder: 'Revenue, FY2024'
+    validations:
+      required: true
+  - type: input
+    id: shown
+    attributes:
+      label: Value returned
+    validations:
+      required: true
+  - type: input
+    id: correct
+    attributes:
+      label: Value in the filing
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link to the filing on SEC EDGAR
