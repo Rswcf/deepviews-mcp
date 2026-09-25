@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "deepviews": {
+      "command": "npx",
+      "args": ["-y", "deepviews-mcp"]
+    }
+  }
+}
